@@ -6,18 +6,20 @@
     </head>
     <body>
         <div id="container">
-    <header>Crazy Bob's Pumpkin Patch </header>
+    <header>
+        <h1> Crazy Bob's Pumpkin Patch</h1> 
+            </header>
             <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html"> About</a></li>
-                <li><a href="Prduce">Products</a> </li>
-                <li><a href="Contact"> Contact</a> </li>  
+                <li><a href="produce.html">Products</a> </li>
+                <li><a class="active" href="contact.html"> Contact</a> </li>  
             </ul>
             </nav>
             <div id="content">
-                <h2>Contact</h2>
-                <form>
+                <h2 id="h2-contact">Contact</h2>
+                <form id="form-contact">
                     First Name:<br>
                     <input type="text" name="FirstName">
                     <br>  <br>
@@ -33,11 +35,17 @@
                     Message:<br>
                     <textarea cols="70" rows="50">
                     </textarea>
+                    <br>
+                    <button id="button-contact">Send</button>
                 </form>
+                <div id="map">
+                    <h2>Map</h2>
+                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3058.133802004363!2d-111.79689568382214!3d39.96076109116605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x874da891a221b3e7%3A0xbfdba7c6b93ed96c!2sRowley&#39;s+Red+Barn!5e0!3m2!1sen!2sus!4v1507305784620" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
+                <div class="keepOpen"></div>
             <footer><p>Copyright&copy; 2017 Crazy Bob LLC</p></footer>
         </div>
-
-    
-    </body>
+         </div>
+            
+        </body>
 </html>
