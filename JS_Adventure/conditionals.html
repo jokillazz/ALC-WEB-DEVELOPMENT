@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title> JS Adventure Game</title>
+     </head>
+<body>
+    <script>
+            var bread = 0;
+        Inn();
+        function Town(){
+            var town = prompt("Welcome to a small town in some fantasy land place! We have a butcher, a weed dealer and a coke maker, oh, and a Inn!").toLowerCase();
+            
+           if(town == "inn"){
+               Inn();
+           } 
+            else if(town =="baker"){
+                Baker();
+            }
+            else{
+                Town();
+            }
+            
+         function Inn(){
+            var inn = prompt("Come in to the Inn, travellers welcome.");
+        }
+            
+            funtion Baker(){
+                var baker = prompt(Top of the Mornin to ya! What can I get you a loaf of bread, roll, pie, or the good shit!)
+                
+                if(baker == "exit"){
+                    Town();
+            }
+            else if(baker == "bread"){
+                alert("Nice hot loaf of bread for yee!");
+                 bread ++
+            }
+                else{
+                    alert("I don't have any" + baker);
+                    Baker();
+                }
+            }
+        }
+        
+  //     alert("Hey, Listen!");
+  //    confirm("Do you want to go to the movies? As friends!!?");
+   //     prompt("What is your favorite food?");
+        
+        var favColor = prompt ("What is your favorite color?").toLowerCase();
+        switch(favColor){
+            case "blue":
+                     alert("Yep! We get it, you like blue!");
+                       break;
+        case "green":
+                     alert("Yep! We get it, you like green!");
+                       break;
+                       case "red":
+                     alert("Yep! We get it, you like red!");
+                       break;
+            default:
+                alert("What ya doing nibba!");
+                break;
+                       }
+        /*
+        if(favColor == "red"){
+            alert("Your face is red! Is that bad?");
+        }
+        else if (favColor == "green"){
+                 alert("Green is the color of weed!");
+        }
+        else if (favColor == "yellow"){
+                 alert("Yellow reminds me of smiley faces!");
+        }
+        else if (favColor == "purple"){
+                 alert("Purple is another name for it.");
+        }
+        else if (favColor == "orange"){
+                 alert("If you start seeing this color watch out!");
+        }
+        else if (favColor == "pink"){
+                 alert("Pink is gay.");
+        }
+        else if (favColor == "blue"){
+                 alert("Blue is beautiful.");
+        }
+        else if (favColor == "blue"){
+            alert("You have a poor taste in color");
+        }
+        
+         alert("You have a poor taste in color");*/
+        
+        
+      </script>
+    </body>
+</html>

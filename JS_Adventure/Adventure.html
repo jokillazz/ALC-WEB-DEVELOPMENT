@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>Adventure Game</title>
+    </head>
+     <body>
+         <h1> Adventure Game v0.1</h1>
+         <p>By: Joseph Cooper</p>
+       <script>
+         
+           function Start(){
+               var playerName = prompt("What is your name hero?","Raxtaker");
+               alert("Welcome to the land of Gladitanium, "+ playerName);
+               var beginTri = confirm("Are you ready to begin your trial?");
+               
+               if(beginTri){
+                   Arena();
+               }
+              else{
+                  alert("Come back when your ballz have dropped!");
+              }
+           }
+           
+           function Areana(){
+               var areana = prompt("You are entering under a tunnel and you walk out to a croud cheering! There is a muscular man with a shoulder piece of armour and helmet with holes and a shield and spear yelling. You should get ready for what's about to come next check inventory!").toLowerCase();
+               
+               if(village == "inventory" || areana == "check inventory"){
+                   alert("You have a small wooden sheild and a sword engraved with a lions head a true blade");
+                   Areana();
+               }
+               else if(areana=="retreat" || areana=="start to run"){
+                   alert("spear lands in sand right in front of you warrior yells there's no retreat you trapped the only way out is to fight me.s");
+                   Areana();
+               }
+               else if(areana =="Gate" || areana == "go to gate"){
+                   alert("There is a sign attatched to gate must have a victor before opening.");
+                   Areana();
+               }
+               else if (areana == "Attack/Kill warrior" || areana =="you charge the warrior"){
+                   
+                   YBR();
+               
+             }
+            else{
+                alert("I don't understand " + village);
+                Village();
+              }      
+           }
+    
+           function YBR(){
+               var ybr = prompt("You reach the warrior and your spear and sword clash it is your turn to deside your next move.");
+               
+               if(ybr == "attack" || ybr == "you dash foward you slash at the warrior he parries but you still get him a bit but the wound is far from fatal")
+                   
+                   var warrior = prompt("The warrior doesn't even seem to notice the cut and he reaches back to thrust his spear accurately for a devastating blow. Will you attack or defend?");
+               switch(warrior){
+                   case "attack":
+                       alert("Warrior dashes foward he thrusts you take a slight turn and slash down.... The warriors arm is now laying in the sand but blood is spurting from the stub the warrior has now!");
+                       break;
+                   case "defend":
+                       alert("The warrior lunges at you, your shield takes the main portion of the attack and let his spear glance off to the left and you prepare for your next attack.")
+                             }
+           }
+           
+           
+           
+           
+           
+       </script>
+    </body>
+</html>
