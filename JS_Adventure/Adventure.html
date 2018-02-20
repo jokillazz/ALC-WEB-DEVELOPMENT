@@ -7,10 +7,36 @@
          <h1> Adventure Game v0.1</h1>
          <p>By: Joseph Cooper</p>
        <script>
+           
+           var inventory = {
+               woodenshield: 1,
+               lionsword: 1,
+               breastplate: 1,
+               shinguards: 1,
+               sandals: 1,
+           }
          
-           function Start(){
-               var playerName = prompt("What is your name hero?","Raxtaker");
-               alert("Welcome to the land of Gladitanium, "+ playerName);
+           var player = {
+               firstname:"",
+               lastname:"",
+               gender:"",
+               age:"",
+               health:100,
+               score:0,
+           }   
+               Start();
+           
+               function Start(){
+               player.firstname = prompt("What is your first name hero?");
+               player.lastname = prompt("What is your last name?");
+               player.gender = prompt("Gender?");
+               player.age = prompt("how old are you?");
+               
+           }
+           
+          {
+              
+        alert("Welcome to the land of Gladitanium, "+ player.firstname + "/n"+ player.age);
                var beginTri = confirm("Are you ready to begin your trial?");
                
                if(beginTri){
@@ -19,7 +45,7 @@
               else{
                   alert("Come back when your ballz have dropped!");
               }
-           }
+           
            
            function Areana(){
                var areana = prompt("You are entering under a tunnel and you walk out to a croud cheering! There is a muscular man with a shoulder piece of armour and helmet with holes and a shield and spear yelling. You should get ready for what's about to come next check inventory!").toLowerCase();
