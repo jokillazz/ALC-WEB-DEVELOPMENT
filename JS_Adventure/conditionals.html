@@ -1,95 +1,122 @@
 <!DOCTYPE html>
 
-<html>
-<head>
+<html lang="en">
+        <head>
     <title> JS Adventure Game</title>
      </head>
 <body>
+    <h1> Adventure Game v0.1</h1>
+    <p>BY: JOE COOPER</p>
     <script>
-            var bread = 0;
-        Inn();
-        function Town(){
-            var town = prompt("Welcome to a small town in some fantasy land place! We have a butcher, a weed dealer and a coke maker, oh, and a Inn!").toLowerCase();
-            
-           if(town == "inn"){
-               Inn();
-           } 
-            else if(town =="baker"){
-                Baker();
+        
+
+        
+var inventory = {
+                coins:100,
+               sword:0,
+              goldenapples:3,
+              goldenkey:2,
+                yoyo:5,
+                ballofyarn:1,
+                pic:2,
+               axe:1,
             }
-            else{
-                Town();
+            
+  var player = {
+         firstname:"",
+           lastname:"",
+          gender:"",
+          age:"",
+          health:100,
+            score:0,                
             }
             
-         function Inn(){
-            var inn = prompt("Come in to the Inn, travellers welcome.");
-        }
+  var gladiator = {
+                description:"A gladiator challenges others to fight to prove his worth and strength",
+                damage:35,
+                health:75,
+            }
             
-            funtion Baker(){
-                var baker = prompt(Top of the Mornin to ya! What can I get you a loaf of bread, roll, pie, or the good shit!)
+  Start();
+            
+          function Start(){
+     player.firstname = prompt("What is your first name traveller?");
+         player.lastname = prompt("What is your last name ?");
+           player.gender = prompt("Gender?");
+              player.age = prompt("how old are you?");    
                 
-                if(baker == "exit"){
-                    Town();
+                alert("Welcome to the land of Daztopar, "+ player.firstname + " "+ player.lastname +"\n"+ player.age);
+                var beginAdv = confirm("Are you ready to begin your adventure?");
+                
+if(beginAdv){
+    Village();
+                }
+    else{
+      alert("Awe come on we were just getting started!");
+                }
+                
             }
-            else if(baker == "bread"){
-                alert("Nice hot loaf of bread for yee!");
-                 bread ++
-            }
+            
+ function Village(){
+      var village = prompt("You see a peasant village you make your way there looking out you can see the smoke from a bakery and blacksmith. You also see a slaughterhouse and an inn. ").toLowerCase();
+                
+                if(village == "blacksmith" || village == "go to blacksmith"){
+                    
+                    var blacksmith = prompt("The large scared and seared faced bearded blacksmith gives you a snarly look and bellows what can I do for you? \np -Buy Sword").toLowerCase();
+                    
+                    if(blacksmith == "buy sword" && inventory.coins == 100){
+                        inventory.coins = inventory.coins - 100;
+                        inventory.sword = 1;
+                        alert("You've bought a sword! \n Swords = " + inventory.sword + "\n Coins = " + inventory.coins);
+                    }
+                    else{
+                        Alert("This is not enough come back when you have more!");
+                    }
+                    Village(); 
+                    
+                    
+                }
+                else if(village == "inn" || village == "go to inn"){
+                    alert("You walk in to what looks more like the inside of a barn then an in you worry if you should stay here or deside to camp out.");
+                    Village();
+                }
+                else if(village =="slaughterhouse" || village == "go to slaughterhouse"){
+                    alert("There is a sign attached to the door that says 'Out to lunch, will be back at sometime");
+                    Village();
+                }
+                else if(village == "road" || village == " dirt road"){
+                    
+                    YBR();
+                    
+                }
                 else{
-                    alert("I don't have any" + baker);
-                    Baker();
+                    alert("I dont understand " + village);
+                    Village();
                 }
             }
-        }
-        
-  //     alert("Hey, Listen!");
-  //    confirm("Do you want to go to the movies? As friends!!?");
-   //     prompt("What is your favorite food?");
-        
-        var favColor = prompt ("What is your favorite color?").toLowerCase();
-        switch(favColor){
-            case "blue":
-                     alert("Yep! We get it, you like blue!");
-                       break;
-        case "green":
-                     alert("Yep! We get it, you like green!");
-                       break;
-                       case "red":
-                     alert("Yep! We get it, you like red!");
-                       break;
-            default:
-                alert("What ya doing nibba!");
-                break;
-                       }
-        /*
-        if(favColor == "red"){
-            alert("Your face is red! Is that bad?");
-        }
-        else if (favColor == "green"){
-                 alert("Green is the color of weed!");
-        }
-        else if (favColor == "yellow"){
-                 alert("Yellow reminds me of smiley faces!");
-        }
-        else if (favColor == "purple"){
-                 alert("Purple is another name for it.");
-        }
-        else if (favColor == "orange"){
-                 alert("If you start seeing this color watch out!");
-        }
-        else if (favColor == "pink"){
-                 alert("Pink is gay.");
-        }
-        else if (favColor == "blue"){
-                 alert("Blue is beautiful.");
-        }
-        else if (favColor == "blue"){
-            alert("You have a poor taste in color");
-        }
-        
-         alert("You have a poor taste in color");*/
-        
-        
-      </script>
-    </body>
+            
+            function YBR(){
+                var ybr = prompt("The road is empty you see a light hanging over a bridge to the left and to the right a tunnel of overgrown trees with a haunting dark presence.").toLowerCase();
+                
+            funtion YBR(){
+                var ybr = prompt("You go left and you see something standing on the bridge it looks armed and humanlike.")
+                
+            }
+                
+                if(ybr == "talk" || ybr == "talk to orc"){
+                    alert("The orc growles and speaks a language you don't understand but looks angry what do you do?.");
+                    
+                    var orc = prompt("equip axe");
+                    
+                    switch(orc){
+                        case "attack":
+                            alert("you swing at the orc and it burries into his collar bone he yells.");
+                        break;
+                        case "miss":
+                            alert("The orc grabs you and throws you off the bridge");
+                                
+         }
+         }  
+     </script>
+</body>
 </html>
